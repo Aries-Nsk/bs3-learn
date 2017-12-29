@@ -40,23 +40,29 @@ h3 {
     padding-top: 5px;
     transition: background .3s;
 }
-.menu-top .navbar-default .navbar-nav > li > a:hover{
+
+.menu-top .navbar-default .navbar-nav > li > a:hover {
     text-decoration: underline;
 }
-.menu-top .navbar-default .navbar-nav > li > a.btn-red{
+
+.menu-top .navbar-default .navbar-nav > li > a.btn-red {
     color: #fff;
     border-radius: 3px;
     padding: 5px 20px;
 }
-.menu-top .navbar-default .navbar-nav > li > a.btn-red:hover{
+
+.menu-top .navbar-default .navbar-nav > li > a.btn-red:hover {
     background: #ec4835;
     text-decoration: none;
 }
-.menu-top .navbar-default .navbar-nav > li > a > .glyphicon{
+
+.menu-top .navbar-default .navbar-nav > li > a > .glyphicon {
     margin-right: 10px;
     font-size: 17px;
 }
-.flag{
+
+/* TODO Нужно будет убрать паддинги слева для top-menu чтобы добиться выравнивания левого края с основным меню 23:25 */
+.flag {
     margin-right: 5px;
     position: relative;
     top: -1px;
@@ -64,6 +70,9 @@ h3 {
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
+    .menu-top .navbar-nav {
+        float: none !important;
+    }
 
 }
 
@@ -74,6 +83,9 @@ h3 {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+    .menu-top .navbar-default .navbar-nav > li > a:hover {
+        background: #eee;
+    }
 
 }
 
