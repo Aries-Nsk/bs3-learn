@@ -52,21 +52,178 @@ header {
     padding: 15px 5px;
 }
 
+.menu .container {
+    position: relative;
+}
+
+.globe {
+    font-size: 27px;
+    line-height: 58px;
+    position: absolute;
+    right: 20px;
+    cursor: pointer; /* Курсор в виде ссылки */
+    color: #d0cfce;
+    display: none; /* Не отображать */
+}
+
+.slogan {
+    margin-bottom: 80px;
+}
+
+.slogan h1 {
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 33px;
+    color: #7e7e7e;
+}
+
+.slogan h1 span {
+    color: #d42819;
+}
+
+.card-row {
+    margin-bottom: 50px;
+}
+
+.card-row img {
+    box-shadow: 0 0 5px rgba(0, 0, 0, .19);
+    transition: all .5s; /* Время появления тени */
+}
+
+/* При наведении увеличиваем тень */
+.card-row a:hover img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+}
+
+.nav-pager {
+    text-align: center;
+}
+
+.pagination > li > a, .pagination > li > span {
+    color: #b5b3b3;
+}
+
+.pagination > .active > a, .pagination > .active > a:focus, .pagination >
+.active > a:hover, .pagination > .active > span, .pagination >
+.active > span:focus, .pagination > .active > span:hover,
+.pagination > li > a:focus, .pagination > li > a:hover,
+.pagination > li > span:focus, .pagination > li > span:hover {
+    background: #fff;
+    border: 1px solid #ddd;
+    color: #d42819;
+}
+
+footer {
+    margin-bottom: 100px;
+}
+
+footer hr {
+    border-color: #b7b6b6;
+}
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
 
 }
 
-/* Medium Devices, Desktops */
+/* Medium Devoces, Desktops */
 @media only screen and (max-width: 992px) {
+    .navbar-brand {
+        padding: 10px;
+    }
+
+    .icons {
+        display: none;
+        position: absolute;
+        right: 30px;
+        top: 40px; /* Иконки выпадают вниз */
+        /*bottom: 40px;*/ /* вверх */
+    }
+
+    .icons > li {
+        float: none; /* если в ряд float не сбрасывать */
+    }
+
+    .icons > li > a {
+        padding: 5px;
+    }
+
+    .globe {
+        display: block; /* Отобразить */
+    }
+
+    .card-row {
+        text-align: center;
+    }
+}
+
+/* Отобразить иконки при min-width 993 */
+@media only screen and (min-width: 993px) {
+    .icons {
+        display: block !important;
+    }
 
 }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
+    .menu {
+        padding: 0;
+    }
+
+    .navbar-brand img {
+        top: -10px;
+        max-height: 50px;
+    }
+
+    /* Добавим плавности */
+    .navbar-nav > li > a {
+        transition: all .5s;
+    }
+
+    .navbar-default .navbar-nav > li.active-link > a {
+        border-bottom: 0;
+        color: #fff;
+        background: #d42819;
+    }
+
+    /* При наведении */
+    .navbar-default .navbar-nav:not(.icons) > li > a:hover {
+        border-bottom: 0;
+        color: #fff;
+        background: #d42819;
+    }
+
+    /* Покажем иконки соц сетей */
+    .icons {
+        display: block !important;
+        position: relative;
+        right: 0;
+        top: 0;
+    }
+
+    /* Выстроим иконки в ряд */
+    .icons > li {
+        display: inline-block;
+    }
+
+    .globe {
+        display: none;
+    }
+
+    .card {
+        margin-bottom: 50px;
+    }
 
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+    header, .slogan {
+        margin-bottom: 30px;
+    }
+
+    .slogan h1 {
+        font-size: 25px;
+    }
 }
